@@ -7,7 +7,7 @@ import { Link as RouterLink } from "react-router-dom";
 const Navbar = () => {
   let [flag, setFlag] = useState(true);
   const [activeIndex, setActiveIndex] = useState(null);
-
+  let [clicked, setClicked] = useState(true);
   let handleMenuClick = () => {
     if (flag) setFlag(false);
     else setFlag(true);
@@ -114,54 +114,82 @@ const Navbar = () => {
                 CLOSE
               </p>
             </div>
+
             <div className="flex flex-col items-center mt-10">
               {menuItems.map((element, index) => (
-                <>
+                <React.Fragment key={index}>
                   <hr className="w-[94%] border-t-1 border-gray-300" />
-                  <p className="py-6 text-2xl font-semibold">{element}</p>
-                </>
+                  {element === "TEAM" ? (
+                    <RouterLink
+                      to="/team"
+                      onClick={() => {
+                        setFlag(true); // Close the menu
+                      }}
+                      className="py-6 text-2xl font-semibold"
+                    >
+                      {element}
+                    </RouterLink>
+                  ) : (
+                    <Link
+                      to={element.charAt(0) + element.slice(1).toLowerCase()}
+                      spy={true}
+                      smooth={true}
+                      offset={-50}
+                      duration={500}
+                      onClick={() => {
+                        setFlag(true); // Close the menu
+                      }}
+                      className="py-6 text-2xl font-semibold cursor-pointer"
+                    >
+                      {element}
+                    </Link>
+                  )}
+                </React.Fragment>
               ))}
             </div>
-            <div class="text-black space-y-6 pl-7">
-              <div>
-                <h4 class="text-xl text-gray-500 mb-1">Address</h4>
-                <p class="font-semibold leading-snug text-2xl">
-                  541 Melville Geek,
-                  <br />
-                  Palo Alto, CA 94301
-                </p>
-              </div>
 
-              <div>
-                <h4 class="text-sm text-gray-500 mb-1">Social Media</h4>
-                <ul class="space-y-1">
-                  <li>
-                    <a href="#" class="hover:underline">
-                      Facebook
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:underline">
-                      LinkedIn
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:underline">
-                      Instagram
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:underline">
-                      Twitter
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div className="text-black space-y-6 pl-7">
+              <div class="text-black space-y-6 pl-7">
+                <div>
+                  <h4 class="text-xl text-gray-500 mb-1">Address</h4>
+                  <p class="font-semibold leading-snug text-2xl">
+                    541 Melville Geek,
+                    <br />
+                    Palo Alto, CA 94301
+                  </p>
+                </div>
 
-              <div>
-                <h4 class="text-sm text-gray-500 mb-1">Contact Us</h4>
-                <p>info@Naxon Solution</p>
-                <p>+00 333 112234</p>
+                <div>
+                  <h4 class="text-sm text-gray-500 mb-1">Social Media</h4>
+                  <ul class="space-y-1">
+                    <li>
+                      <a href="#" class="hover:underline">
+                        Facebook
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline">
+                        LinkedIn
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline">
+                        Instagram
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline">
+                        Twitter
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="text-sm text-gray-500 mb-1">Contact Us</h4>
+                  <p>info@Naxon Solution</p>
+                  <p>+00 333 112234</p>
+                </div>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import img1 from "../assets/Team/1.JPG";
+import img2 from "../assets/Team/2.JPG";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
 const Team = () => {
@@ -7,7 +8,7 @@ const Team = () => {
     {
       name: "Hameed Khan",
       role: "CEO and Founder @ Naxon Solution",
-      img: img1,
+      img: img2,
     },
     {
       name: "Touseef Khattak",
@@ -27,7 +28,7 @@ const Team = () => {
           <div key={index} className="flex flex-col">
             <img
               src={item.img}
-              className="w-40 h-60 rounded-2xl "
+              className="w-52 h-64 rounded-2xl "
               alt={`${item.name}'s picture`}
             />
             <p className="text-2xl font-bold my-3">{item.name}</p>
