@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import logo from "../assets/logo.jpg";
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
-import Getstarted from "../Pages/Getstarted";
+
 const Navbar = () => {
   let [flag, setFlag] = useState(true);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -47,27 +47,39 @@ const Navbar = () => {
         </div>
 
         <nav className="max-lg:hidden w-[55%] flex-wrap ">
-          <ul className="flex gap-4 flex-wrap ">
+          <ul className="flex gap-4 flex-wrap">
             {menuItemsLarge.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleSetActive(index)}
-                className={`menu-btns ${
-                  activeIndex === index
-                    ? "bg-black border-1 border-black text-amber-50"
-                    : ""
-                }`}
-              >
-                <Link
-                  to={`${item}`}
-                  spy={true}
-                  smooth={true}
-                  offset={-50}
-                  duration={500}
-                >
-                  {item}
-                </Link>
-              </button>
+              <li key={index}>
+                {item === "Team" ? (
+                  <RouterLink
+                    to="/team"
+                    onClick={() => handleSetActive(index)}
+                    className={`menu-btns ${
+                      activeIndex === index
+                        ? "bg-black border-1 border-black text-amber-50"
+                        : ""
+                    }`}
+                  >
+                    {item}
+                  </RouterLink>
+                ) : (
+                  <Link
+                    to={item}
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                    onClick={() => handleSetActive(index)}
+                    className={`menu-btns ${
+                      activeIndex === index
+                        ? "bg-black border-1 border-black text-amber-50"
+                        : ""
+                    }`}
+                  >
+                    {item}
+                  </Link>
+                )}
+              </li>
             ))}
           </ul>
         </nav>
