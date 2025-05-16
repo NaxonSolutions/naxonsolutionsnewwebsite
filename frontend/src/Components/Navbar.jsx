@@ -16,21 +16,24 @@ const Navbar = () => {
   const handleSetActive = (index) => {
     setActiveIndex(index);
   };
+
+  // Define menu items with their corresponding types
   const menuItems = [
-    "HOME",
-    "ABOUT",
-    "SERVICES",
-    "PORTFOLIO",
-    "CONTACT",
-    "TEAM",
+    { name: "HOME", type: "scroll" },
+    { name: "ABOUT", type: "scroll" },
+    { name: "SERVICES", type: "scroll" },
+    { name: "PORTFOLIO", type: "route" },
+    { name: "CONTACT", type: "scroll" },
+    { name: "TEAM", type: "route" },
   ];
+
   const menuItemsLarge = [
-    "Home",
-    "About",
-    "Services",
-    "Portfolio",
-    "Contact",
-    "Team",
+    { name: "Home", type: "scroll" },
+    { name: "About", type: "scroll" },
+    { name: "Services", type: "scroll" },
+    { name: "Portfolio", type: "route" },
+    { name: "Contact", type: "scroll" },
+    { name: "Team", type: "route" },
   ];
 
   return (
@@ -50,21 +53,21 @@ const Navbar = () => {
           <ul className="flex gap-4 flex-wrap">
             {menuItemsLarge.map((item, index) => (
               <li key={index}>
-                {item === "Team" ? (
+                {item.type === "route" ? (
                   <RouterLink
-                    to="/team"
+                    to={`/${item.name.toLowerCase()}`}
                     onClick={() => handleSetActive(index)}
                     className={`menu-btns ${
                       activeIndex === index
-                        ? "bg-black border-1 border-black text-amber-50"
-                        : ""
+                        ? "bg-black border-1 border-black text-amber-50 cursor-pointer"
+                        : "cursor-pointer"
                     }`}
                   >
-                    {item}
+                    {item.name}
                   </RouterLink>
                 ) : (
                   <Link
-                    to={item}
+                    to={item.name}
                     spy={true}
                     smooth={true}
                     offset={-50}
@@ -72,11 +75,11 @@ const Navbar = () => {
                     onClick={() => handleSetActive(index)}
                     className={`menu-btns ${
                       activeIndex === index
-                        ? "bg-black border-1 border-black text-amber-50"
-                        : ""
+                        ? "bg-black border-1 border-black text-amber-50 cursor-pointer"
+                        : "cursor-pointer"
                     }`}
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 )}
               </li>
@@ -116,32 +119,36 @@ const Navbar = () => {
             </div>
 
             <div className="flex flex-col items-center mt-10">
-              {menuItems.map((element, index) => (
+              {menuItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <hr className="w-[94%] border-t-1 border-gray-300" />
-                  {element === "TEAM" ? (
+                  {item.type === "route" ? (
                     <RouterLink
-                      to="/team"
+                      to={`/${item.name.toLowerCase()}`}
                       onClick={() => {
-                        setFlag(true); // Close the menu
+                        setFlag(true);
+                        handleSetActive(index);
                       }}
                       className="py-6 text-2xl font-semibold"
                     >
-                      {element}
+                      {item.name}
                     </RouterLink>
                   ) : (
                     <Link
-                      to={element.charAt(0) + element.slice(1).toLowerCase()}
+                      to={
+                        item.name.charAt(0) + item.name.slice(1).toLowerCase()
+                      }
                       spy={true}
                       smooth={true}
                       offset={-50}
                       duration={500}
                       onClick={() => {
-                        setFlag(true); // Close the menu
+                        setFlag(true);
+                        handleSetActive(index);
                       }}
                       className="py-6 text-2xl font-semibold cursor-pointer"
                     >
-                      {element}
+                      {item.name}
                     </Link>
                   )}
                 </React.Fragment>

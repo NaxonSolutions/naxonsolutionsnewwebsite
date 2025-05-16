@@ -7,6 +7,10 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import ChatWidgetForm from "./../Components/ChatWidgetForm";
+import Values from "../Components/Values";
+import ThereIsAReason from "../Components/There _is_a_reason";
+import Portfolio2 from "./Portfolio2";
+import RatingSection from "../Components/RatingSection";
 const Home = () => {
   return (
     <>
@@ -15,7 +19,10 @@ const Home = () => {
         <Card />
         <About />
         <Services />
-        <Portfolio />
+        <Portfolio2 />
+        <Values />
+        <ThereIsAReason />
+        <RatingSection />
         <Contact />
         <ChatWidgetForm></ChatWidgetForm>
         <Footer></Footer>
