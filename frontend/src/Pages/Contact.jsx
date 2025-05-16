@@ -6,8 +6,11 @@ const Contact = () => {
       id="Contact"
       className="min-h-screen overflow-x-hidden sm:px-12 lg:grid lg:grid-cols-2"
     >
-      <div className="flex pb-10  flex-col bg-white  m-6 p-6 border-0 rounded-3xl py-14 gap-12">
-        <div className="text-4xl font-medium">+92 3435395571</div>
+      <div className="flex pb-10  flex-col bg-blue-200  m-6 p-6 border-0 rounded-3xl py-14 gap-12">
+        <div>
+          <p className="text-4xl font-medium">Phone Number:</p>
+          <p className="text-xl mt-3"> +92-343-5395571</p>
+        </div>
         <hr />
         <div className="text-2xl">Address</div>
         <div>Islambad Gulberg Green, Golden Height</div>
@@ -16,7 +19,7 @@ const Contact = () => {
         <div>info@naxonsolutions.com</div>
       </div>
       {/* Form Contact */}
-      <div className="flex pb-10 flex-col bg-stone-50 m-6 p-6 border-0 rounded-3xl py-14 gap-12 sm:px-14">
+      <div className="flex pb-10 flex-col bg-blue-200 m-6 p-6 border-0 rounded-3xl py-14 gap-12 sm:px-14">
         <form
           action="https://naxonsolutionsnewwebsite.vercel.app/api/contact"
           method="POST"
@@ -37,7 +40,7 @@ const Contact = () => {
               name="name"
               required
               placeholder="Your Name"
-              className="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full px-4 py-2 rounded-xl border border-black focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
           </div>
 
@@ -51,7 +54,7 @@ const Contact = () => {
               name="email"
               required
               placeholder="you@example.com"
-              className="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full px-4 py-2 rounded-xl border border-black focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
           </div>
 
@@ -65,7 +68,7 @@ const Contact = () => {
               rows="4"
               required
               placeholder="Write your message..."
-              className="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full px-4 py-2 rounded-xl border border-black focus:outline-none focus:ring-2 focus:ring-teal-400"
             ></textarea>
           </div>
 
@@ -78,14 +81,12 @@ const Contact = () => {
             </button>
           </div>
 
-          <hr className="w-full border-t border-gray-200" />
-
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-black">
             <div>
               <strong>Address:</strong> Islamabad, Gulberg Green, Golden Height
             </div>
             <div>
-              <strong>Email:</strong> zahidsher098@gmail.com
+              <strong>Email:</strong> info@naxonsolutions.com
             </div>
           </div>
         </form>

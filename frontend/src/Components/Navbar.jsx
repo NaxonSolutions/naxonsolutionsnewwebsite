@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full flex bg-blend-darken backdrop-blur-md h-22 z-50 items-center shadow-md px-2 sticky top-0 gap-10 justify-around">
+      <div className="w-full flex bg-blend-darken backdrop-blur-md h-22 z-50 items-center shadow-md px-2 sticky top-0 gap-10 justify-around  bg-blue-200">
         <div className="w-1/4 lg:flex lg:justify-end lg:pr-12 lg:w-[17%] lg:pl-5 ">
           <Link to="Home" spy={true} smooth={true} offset={-50} duration={500}>
             <img

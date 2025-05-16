@@ -14,10 +14,10 @@ const static_images = [
 ];
 const Card = () => {
   return (
-    <div className="px-3 pt-14 sm:max-lg:grid-rows-2">
+    <div className="px-3 pt-14 sm:max-lg:grid-rows-2  ">
       {/* Shared container with border/rounded */}
 
-      <div className="overflow-hidden rounded-3xl border border-gray-300 bg-gray-100 shadow-xl h-[120vh] lg:grid lg:grid-cols-2 md:mx-7 lg:pr-8">
+      <div className="overflow-hidden rounded-3xl border border-gray-300  bg-blue-200  shadow-xl h-[120vh] lg:grid lg:grid-cols-2 md:mx-7 lg:pr-8">
         {/* Static Card Section */}
         <div className="h-100 flex justify-center flex-col items-center px-8 py-10 lg:block lg:pl-14 pt-42">
           <div className="text-6xl mb-8 mt-12">Welcome to Naxon Solution</div>
@@ -27,9 +27,11 @@ const Card = () => {
             brands, developing websites, and engineering digital solutions for
             forward-thinking tech enterprises.
           </div>
-          <button className="mt-7 bg-black rounded-3xl mb-67 py-3 px-8 text-amber-50 text-xl">
-            About us
-          </button>
+          <Link to="/getstarted">
+            <button className="mt-7 bg-black rounded-3xl mb-67 py-3 px-8 text-amber-50 text-xl">
+              Book a Call
+            </button>
+          </Link>
         </div>
 
         {/* The Div of the images  */}

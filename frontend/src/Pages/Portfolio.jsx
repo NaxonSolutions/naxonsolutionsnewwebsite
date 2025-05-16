@@ -167,7 +167,7 @@ const Portfolio = () => {
           </div>
         </div>
         {/* bg-[#f8f8f8] */}
-        <div className="bg-[#f8f8f8] mx-15 rounded-4xl mt-20">
+        <div className="bg-blue-200 mx-15 rounded-4xl mt-20">
           <div className="flex flex-col items-center p-4 ">
             <div className="text-4xl mt-16  font-semibold mb-8">
               Our Portfolio

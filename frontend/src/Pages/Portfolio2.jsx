@@ -91,7 +91,7 @@ const Portfolio = () => {
   });
 
   return (
-    <div id="Portfolio" className="pb-30 lg:mx-30">
+    <div id="Portfolio" className="pb-30 lg:mx-5 rounded-4xl">
       <div className="lg:grid lg:grid-cols-2 lg:gap-2">
         <div className="flex flex-col justify-center items-center ">
           <div className="p-6 pt-20">
@@ -136,7 +136,7 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <div className="bg-[#f8f8f8] mx-15 rounded-4xl mt-20">
+      <div className="bg-blue-200 mx-15 rounded-4xl mt-20">
         <div className="flex flex-col items-center p-4">
           <div className="text-4xl mt-16 font-semibold mb-8">Our Portfolio</div>
           <div className="pt-6 rounded-4xl flex flex-col items-center md:gap-2 w-full">
@@ -266,7 +266,6 @@ const Portfolio = () => {
         </div>
       </div>
 
-      {/* Rating Section */}
     </div>
   );
 };
