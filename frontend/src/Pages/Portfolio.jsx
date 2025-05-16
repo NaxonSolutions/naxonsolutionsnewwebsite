@@ -16,28 +16,70 @@ import image7 from "../assets/portfolioImages/7.webp";
 import image8 from "../assets/portfolioImages/8.webp";
 import image9 from "../assets/portfolioImages/9.webp";
 import image10 from "../assets/portfolioImages/10.webp";
-import tick from "../assets/tick.png";
 import { BsArrowUpRight } from "react-icons/bs";
 import { HiMiniSquaresPlus } from "react-icons/hi2";
-import logo from "../assets/logo.jpg";
-import { CiMail } from "react-icons/ci";
-import { IoMdCall } from "react-icons/io";
-import { CiLocationOn } from "react-icons/ci";
 import clientRating from "../assets/portfolioImages/clientRating.jpg";
 import Footer from "./Footer";
+
 const Portfolio = () => {
   const portfolioImageObjects = [
-    { title: "Digital Business Funnel", imageSrc: image1 },
-    { title: "Healthcare Funnel", imageSrc: image2 },
-    { title: "Digital Funnel", imageSrc: image3 },
-    { title: "Digital Business Funnel", imageSrc: image4 },
-    { title: "Digital Business Funnel", imageSrc: image5 },
-    { title: "Digital Business Funnel", imageSrc: image6 },
-    { title: "Digital Business Funnel", imageSrc: image7 },
-    { title: "Digital Business Funnel", imageSrc: image8 },
-    { title: "Digital Business Funnel", imageSrc: image9 },
-    { title: "Digital Business Funnel", imageSrc: image10 },
+    {
+      title: "Digital Business Funnel",
+      imageSrc: image1,
+      category: "funnels",
+    },
+    {
+      title: "Healthcare Dashboard",
+      imageSrc: image2,
+      category: "dashboards",
+    },
+    {
+      title: "Customer Feedback Form",
+      imageSrc: image3,
+      category: "forms",
+    },
+    {
+      title: "Email Automation Flow",
+      imageSrc: image4,
+      category: "automation",
+    },
+    {
+      title: "Lead Generation Survey",
+      imageSrc: image5,
+      category: "surveys",
+    },
+    {
+      title: "Marketing Funnel",
+      imageSrc: image6,
+      category: "funnels",
+    },
+    {
+      title: "Task Automation System",
+      imageSrc: image7,
+      category: "automation",
+    },
+    {
+      title: "Analytics Dashboard",
+      imageSrc: image8,
+      category: "dashboards",
+    },
+    {
+      title: "Contact Form",
+      imageSrc: image9,
+      category: "forms",
+    },
+    {
+      title: "Customer Survey",
+      imageSrc: image10,
+      category: "surveys",
+    },
   ];
+
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const filteredProjects = portfolioImageObjects.filter((project) =>
+    activeFilter === "all" ? true : project.category === activeFilter
+  );
 
   const testimonials = [
     {
@@ -125,79 +167,123 @@ const Portfolio = () => {
           </div>
         </div>
         {/* bg-[#f8f8f8] */}
-        <div className="flex flex-col items-center p-4 ">
-          <div className="text-4xl mt-16  font-semibold mb-8">
-            Our Portfolio
-          </div>
-          <div className=" pt-6 px-6 rounded-4xl mx-9 flex flex-col items-center md:gap-2">
-            <div className="flex justify-center items-center sm:gap-6 w-full md:flex-row md:pt-8 flex-wrap md:max-w-4/5 md:gap-2 gap-2">
-              <div className="border-1 sm:px-6 sm:py-1.5 px-2 py-2 sm:rounded-full rounded-4xl flex items-center justify-between gap-2">
-                <HiMiniSquaresPlus className="w-4 h-4" />
-                <p className="hidden sm:block">All</p>
-              </div>
-
-              {/* First Button Row */}
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="primary-btn">Custom dashboards</button>
-                <button className="primary-btn">Forms</button>
-              </div>
-
-              {/* Second Button Row */}
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="primary-btn">Funnels/Websites</button>
-                <button className="primary-btn">Surveys</button>
-              </div>
+        <div className="bg-[#f8f8f8] mx-15 rounded-4xl mt-20">
+          <div className="flex flex-col items-center p-4 ">
+            <div className="text-4xl mt-16  font-semibold mb-8">
+              Our Portfolio
             </div>
-            {/* Projects */}
-          </div>
-        </div>
+            <div className=" pt-6 rounded-4xl flex flex-col items-center md:gap-2 w-full ]">
+              <div className="flex justify-center items-center sm:gap-6 w-full md:flex-row md:pt-8 flex-wrap md:max-w-4/5 md:gap-2 gap-2">
+                <button
+                  onClick={() => setActiveFilter("all")}
+                  className={`filter-btn ${
+                    activeFilter === "all" ? "active" : ""
+                  }`}
+                >
+                  <HiMiniSquaresPlus className="w-4 h-4" />
+                  <span className="hidden sm:block">All</span>
+                </button>
 
-        {/* Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-2 py-13 sm:px-12">
-          {portfolioImageObjects.map((element, index) => (
-            <div
-              key={index}
-              className="bg-white m-3 py-2 border-0 rounded-2xl h-[600px] overflow-hidden"
-            >
-              <div className="flex items-center justify-between px-5 pt-6 pb-3">
-                <div className="text-2xl font-medium">{element.title}</div>
-                <div className="bg-black px-2.5 py-2.5 rounded-3xl">
-                  <BsArrowUpRight className="text-white" />
+                <div className="flex flex-wrap justify-center gap-4">
+                  <button
+                    onClick={() => setActiveFilter("dashboards")}
+                    className={`filter-btn ${
+                      activeFilter === "dashboards" ? "active" : ""
+                    }`}
+                  >
+                    Custom Dashboards
+                  </button>
+                  <button
+                    onClick={() => setActiveFilter("forms")}
+                    className={`filter-btn ${
+                      activeFilter === "forms" ? "active" : ""
+                    }`}
+                  >
+                    Forms
+                  </button>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-4">
+                  <button
+                    onClick={() => setActiveFilter("funnels")}
+                    className={`filter-btn ${
+                      activeFilter === "funnels" ? "active" : ""
+                    }`}
+                  >
+                    Funnels/Websites
+                  </button>
+                  <button
+                    onClick={() => setActiveFilter("surveys")}
+                    className={`filter-btn ${
+                      activeFilter === "surveys" ? "active" : ""
+                    }`}
+                  >
+                    Surveys
+                  </button>
+                  <button
+                    onClick={() => setActiveFilter("automation")}
+                    className={`filter-btn ${
+                      activeFilter === "automation" ? "active" : ""
+                    }`}
+                  >
+                    Automation
+                  </button>
                 </div>
               </div>
-              <div className="overflow-hidden h-[500px] rounded-3xl p-4 group">
-                <motion.div
-                  className="w-full"
-                  initial={{ y: 0 }}
-                  whileHover={{ y: "-50%" }}
-                  transition={{ duration: 1, ease: "easeInOut" }}
-                >
-                  <img
-                    className="h-[500px] w-full object-cover rounded-3xl"
-                    src={element.imageSrc}
-                    alt="Primary"
-                  />
-                  <img
-                    className="h-[500px] w-full object-cover rounded-3xl"
-                    src={
-                      index === 0
-                        ? "https://plus.unsplash.com/premium_photo-1722945683602-fa3b05086316?w=1000&auto=format&fit=crop&q=60"
-                        : index === 1
-                        ? "https://images.unsplash.com/photo-1674027326254-88c960d8e561?w=1000&auto=format&fit=crop&q=60"
-                        : index === 2
-                        ? "https://images.unsplash.com/photo-1674027326254-88c960d8e561?w=1000&auto=format&fit=crop&q=60"
-                        : index === 3
-                        ? "https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?w=1000&auto=format&fit=crop&q=60"
-                        : "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?w=1000&auto=format&fit=crop&q=60"
-                    }
-                    alt="Secondary"
-                  />
-                </motion.div>
-              </div>
+              {/* Projects */}
             </div>
-          ))}
-        </div>
+          </div>
 
+          {/* Projects */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-2 py-13 sm:px-12">
+            {filteredProjects.map((element, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className="bg-white m-3 py-2 border-0 rounded-2xl h-[600px] overflow-hidden"
+              >
+                <div className="flex items-center justify-between px-5 pt-6 pb-3">
+                  <div className="text-2xl font-medium">{element.title}</div>
+                  <div className="bg-black px-2.5 py-2.5 rounded-3xl">
+                    <BsArrowUpRight className="text-white" />
+                  </div>
+                </div>
+                <div className="overflow-hidden h-[500px] rounded-3xl p-4 group">
+                  <motion.div
+                    className="w-full"
+                    initial={{ y: 0 }}
+                    whileHover={{ y: "-50%" }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
+                  >
+                    <img
+                      className="h-[500px] w-full object-cover rounded-3xl"
+                      src={element.imageSrc}
+                      alt="Primary"
+                    />
+                    <img
+                      className="h-[500px] w-full object-cover rounded-3xl"
+                      src={
+                        index === 0
+                          ? "https://plus.unsplash.com/premium_photo-1722945683602-fa3b05086316?w=1000&auto=format&fit=crop&q=60"
+                          : index === 1
+                          ? "https://images.unsplash.com/photo-1674027326254-88c960d8e561?w=1000&auto=format&fit=crop&q=60"
+                          : index === 2
+                          ? "https://images.unsplash.com/photo-1674027326254-88c960d8e561?w=1000&auto=format&fit=crop&q=60"
+                          : index === 3
+                          ? "https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?w=1000&auto=format&fit=crop&q=60"
+                          : "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?w=1000&auto=format&fit=crop&q=60"
+                      }
+                      alt="Secondary"
+                    />
+                  </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
         {/* Rating Section */}
         <div className="flex flex-col gap-12 items-center mt-40">
           <div className="flex items-center bg-black border-0 rounded-4xl gap-3 px-4 py-3">

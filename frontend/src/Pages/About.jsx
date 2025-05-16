@@ -1,8 +1,5 @@
 import React from "react";
-import img1 from "../assets/About/1.svg";
-import img2 from "../assets/About/2.svg";
-import img3 from "../assets/About/3.svg";
-import img4 from "../assets/About/4.svg";
+import { Link } from "react-router-dom";
 import { BsShieldPlus } from "react-icons/bs";
 import { SiGoogleanalytics } from "react-icons/si";
 import { DiYii } from "react-icons/di";
@@ -44,8 +41,10 @@ const About = () => {
         <div className="text-lg text-center">
           Building Trust Through Transparency, Collaboration and Innovation
         </div>
-        <div className="py-6 mt-6 w-34 border rounded-full h-10 flex items-center justify-center bg-black text-gray-50 text-md">
-          <button>Contact Us</button>
+        <div className="py-6 cursor-pointer mt-6 w-34 border rounded-full h-10 flex items-center justify-center bg-black text-gray-50 text-md">
+          <Link to="/getstarted">
+            <button className="cursor-pointer">Contact Us</button>
+          </Link>
         </div>
       </div>
 

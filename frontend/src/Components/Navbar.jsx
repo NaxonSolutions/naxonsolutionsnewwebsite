@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import logo from "../assets/logo.jpg";
 import { Link } from "react-scroll";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   let [flag, setFlag] = useState(true);
   const [activeIndex, setActiveIndex] = useState(null);
-  let [clicked, setClicked] = useState(true);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
   let handleMenuClick = () => {
     if (flag) setFlag(false);
     else setFlag(true);
@@ -15,6 +18,20 @@ const Navbar = () => {
 
   const handleSetActive = (index) => {
     setActiveIndex(index);
+  };
+
+  const handleScrollNavigation = (itemName) => {
+    // If we're not on the home page, first navigate to home
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Add a small delay to ensure navigation completes before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(itemName);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
   };
 
   // Define menu items with their corresponding types
@@ -72,7 +89,10 @@ const Navbar = () => {
                     smooth={true}
                     offset={-50}
                     duration={500}
-                    onClick={() => handleSetActive(index)}
+                    onClick={() => {
+                      handleScrollNavigation(item.name);
+                      handleSetActive(index);
+                    }}
                     className={`menu-btns ${
                       activeIndex === index
                         ? "bg-black border-1 border-black text-amber-50 cursor-pointer"
@@ -145,6 +165,9 @@ const Navbar = () => {
                       onClick={() => {
                         setFlag(true);
                         handleSetActive(index);
+                        handleScrollNavigation(
+                          item.name.charAt(0) + item.name.slice(1).toLowerCase()
+                        );
                       }}
                       className="py-6 text-2xl font-semibold cursor-pointer"
                     >

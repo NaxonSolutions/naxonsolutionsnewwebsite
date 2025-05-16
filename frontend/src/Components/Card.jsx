@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Chatbox from "./ChatWidgetForm";
+import { Link } from "react-router-dom";
 
 const images = [
   "https://plus.unsplash.com/premium_photo-1681666713641-8d722b681edc?w=800&auto=format&fit=crop&q=60",
@@ -20,7 +20,7 @@ const Card = () => {
       <div className="overflow-hidden rounded-3xl border border-gray-300 bg-gray-100 shadow-xl h-[120vh] lg:grid lg:grid-cols-2 md:mx-7 lg:pr-8">
         {/* Static Card Section */}
         <div className="h-100 flex justify-center flex-col items-center px-8 py-10 lg:block lg:pl-14 pt-42">
-          <div className="text-7xl mb-8 mt-25">Finally</div>
+          <div className="text-6xl mb-8 mt-12">Welcome to Naxon Solution</div>
           <div className="max-lg:text-center lg:text-2xl">
             You've discovered Naxon Solution, a comprehensive software company
             dedicated to providing expert tech support for CRMs, crafting

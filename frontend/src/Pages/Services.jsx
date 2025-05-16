@@ -1,5 +1,4 @@
 import React from "react";
-
 import icon1 from "../assets/servicesSvgs/1.svg";
 import icon2 from "../assets/servicesSvgs/2.svg";
 import icon3 from "../assets/servicesSvgs/3.svg";
@@ -12,51 +11,51 @@ import icon8 from "../assets/servicesSvgs/8.svg";
 const cards = [
   {
     image: icon1,
-    title: "Lead Generation & Management",
+    title: "End-to-End GHL Platform Implementation",
     description:
-      "Capture leads from multiple sources, automatically assign them to pipelines, and nurture them through smart workflows.",
+      "End-to-end GoHighLevel setup including account configuration, branding, and essential modules to get you fully operational.",
   },
   {
     image: icon2,
-    title: "Automated Follow-Up Sequences",
+    title: "Custom Web Assets & Conversion Systems",
     description:
-      "Create multi-channel automation using SMS, email, and voicemail drops to keep your leads engaged and convert faster.",
+      "Custom websites, sales funnels, calendars, forms, and surveys designed and deployed directly in GHL.",
   },
   {
     image: icon3,
-    title: "Booking & Appointment Scheduling",
+    title: "Advanced Workflow & Automation Engineering",
     description:
-      "Let prospects book directly into your calendar, send reminders, and integrate the process with your sales pipelines.",
+      "Advanced automation systems to engage leads, onboard clients, and streamline business operations.",
   },
   {
     image: icon4,
-    title: "Funnel & Landing Page Builder",
+    title: "Seamless Third-Party Integration Solutions",
     description:
-      "Design high-converting funnels and pages using a drag-and-drop builder integrated with forms, calendars, and payment tools.",
+      "Connect your systems with tools like Zapier, N8N, and Integromat for seamless data flow and task automation.",
   },
   {
     image: icon5,
-    title: "CRM & Pipeline Tracking",
+    title: "Custom Development & API Integration",
     description:
-      "Visualize customer journeys, manage pipeline stages, and track sales opportunities all in one centralized CRM.",
+      "Tailored coding and API integrations to extend GoHighLevel's capabilities and solve unique business needs.",
   },
   {
     image: icon6,
-    title: "Reputation Management",
+    title: "A2P 10DLC Compliance & Twilio Configuration",
     description:
-      "Collect reviews, monitor feedback, and automatically request testimonials to boost your client’s online presence.",
+      "Full support for Twilio integration, A2P 10DLC registration, number setup, and message deliverability optimization.",
   },
   {
     image: icon7,
-    title: "White-Label Client Portals",
+    title: "Automated Client Onboarding Systems",
     description:
-      "Offer branded dashboards where clients can access reporting, communications, and campaign insights under your agency’s name.",
+      "Automated onboarding workflows with forms, tasks, and welcome emails to guide new clients from signup to success.",
   },
   {
     image: icon8,
-    title: "Social Media & Ad Reporting",
+    title: "Scalable Snapshot Creation & Deployment",
     description:
-      "Track performance across Google, Facebook, and Instagram ads alongside organic social insights and ROI metrics.",
+      "Build and deploy reusable GHL snapshots for efficient replication of your proven setups across accounts.",
   },
 ];
 
