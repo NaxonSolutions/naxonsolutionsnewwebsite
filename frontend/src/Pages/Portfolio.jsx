@@ -142,26 +142,26 @@ const Portfolio = () => {
             </div>
             <div className="flex flex-row flex-wrap justify-center gap-2 sm:w-full">
               <button className=" py-6 px-2 mt-6 w-full border-0 rounded-full h-10 flex items-center justify-center bg-black text-gray-50 text-md sm:w-1/4 sm:py-5 ">
-                <Link
-                  to="Contact"
+                <RouterLink
+                  to="/getstarted"
                   spy={true}
                   smooth={true}
                   offset={-50}
                   duration={500}
                 >
                   Schedule a Call
-                </Link>
+                </RouterLink>
               </button>
               <button className=" py-6 mt-6 w-full border-0 rounded-full px-2 h-10 flex items-center justify-center bg-white text-black text-md sm:w-1/4 sm:py-5 max-md:mt-1 ">
-                <Link
-                  to="Contact"
+                <RouterLink
+                  to="/getstarted"
                   spy={true}
                   smooth={true}
                   offset={-50}
                   duration={500}
                 >
                   Contact Us
-                </Link>
+                </RouterLink>
               </button>
             </div>
           </div>
