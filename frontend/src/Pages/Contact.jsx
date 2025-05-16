@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div
       id="Contact"
-      className="min-h-screen overflow-x-hidden sm:px-12 lg:grid lg:grid-cols-2"
+      className="min-h-screen overflow-x-hidden sm:px-12 lg:grid lg:grid-cols-2 mb-20"
     >
       <div className="flex pb-10  flex-col bg-blue-200  m-6 p-6 border-0 rounded-3xl py-14 gap-12">
         <div>

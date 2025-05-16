@@ -23,12 +23,13 @@ const Team = () => {
       <Link to="/">
         <Navbar></Navbar>
       </Link>
+      
       <div className="flex justify-around items-center h-[85vh] pt-20 pb-20 bg-white">
         {team.map((item, index) => (
           <div key={index} className="flex flex-col">
             <img
               src={item.img}
-              className="w-52 h-64 rounded-2xl "
+              className="w-52 h-64 rounded-2xl object-cover"
               alt={`${item.name}'s picture`}
             />
             <p className="text-2xl font-bold my-3">{item.name}</p>

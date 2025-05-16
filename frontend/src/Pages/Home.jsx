@@ -11,6 +11,7 @@ import Values from "../Components/Values";
 import ThereIsAReason from "../Components/There _is_a_reason";
 import Portfolio2 from "./Portfolio2";
 import RatingSection from "../Components/RatingSection";
+import TestimonialSlider from "../Components/TestimonialSlider";
 const Home = () => {
   return (
     <>
@@ -22,7 +23,8 @@ const Home = () => {
         <Portfolio2 />
         <Values />
         <ThereIsAReason />
-        <RatingSection />
+        <TestimonialSlider />
+        {/* <RatingSection /> */}
         <Contact />
         <ChatWidgetForm></ChatWidgetForm>
         <Footer></Footer>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import { Link } from "react-scroll";
 import { Link as RouterLink, useNavigate, useLocation } from "react-router-dom";
 
@@ -59,7 +59,7 @@ const Navbar = () => {
         <div className="w-1/4 lg:flex lg:justify-end lg:pr-12 lg:w-[17%] lg:pl-5 ">
           <Link to="Home" spy={true} smooth={true} offset={-50} duration={500}>
             <img
-              className="w-13.5 h-13.5 rounded-4xl object-contain ml-5"
+              className="w-35.5 h-35.5 rounded-4xl object-contain ml-5"
               src={logo}
               alt=""
             />

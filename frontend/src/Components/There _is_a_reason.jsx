@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import { CiMail, CiLocationOn } from "react-icons/ci";
 import { IoMdCall } from "react-icons/io";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 const ThereIsAReason = () => {
   return (

@@ -19,7 +19,7 @@ import image10 from "../assets/portfolioImages/10.webp";
 import tick from "../assets/tick.png";
 import { BsArrowUpRight } from "react-icons/bs";
 import { HiMiniSquaresPlus } from "react-icons/hi2";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import { CiMail } from "react-icons/ci";
 import { IoMdCall } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
@@ -265,7 +265,6 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-
     </div>
   );
 };
