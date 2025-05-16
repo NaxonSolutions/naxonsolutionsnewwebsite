@@ -1,6 +1,6 @@
 import React from "react";
-import img1 from "../assets/Team/1.JPG";
-import img2 from "../assets/Team/2.JPG";
+import img1 from "../assets/Team/1.jpg";
+import img2 from "../assets/Team/2.jpg";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
 const Team = () => {
