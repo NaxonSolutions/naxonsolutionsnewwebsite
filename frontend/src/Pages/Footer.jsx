@@ -2,8 +2,8 @@ import React from "react";
 import logo from "../assets/logo.jpg";
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-white rounded-tl-2xl rounded-tr-2xl mx-5 py-3 sm:mx-16 md:flex-row md:justify-around">
-      <img className="w-22 h-22" src={logo} alt="" />
+    <div className="bg-blue-200 flex justify-around items-center py-4 ">
+      <img className="w-12 h-12 rounded-4xl" src={logo} alt="" />
       <p>
         Copyright © 2024 <span className="font-bold">Naxon Solution</span>. All
         rights reserved.
