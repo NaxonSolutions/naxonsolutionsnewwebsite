@@ -59,7 +59,7 @@ const Navbar = () => {
         <div className="w-1/4 lg:flex lg:justify-end lg:pr-12 lg:w-[17%] lg:pl-5 ">
           <Link to="Home" spy={true} smooth={true} offset={-50} duration={500}>
             <img
-              className="w-35.5 h-35.5 rounded-4xl object-contain ml-5"
+              className="w-35.5 h-35.5 rounded-4xl object-contain ml-5 cursor-pointer"
               src={logo}
               alt=""
             />
@@ -109,7 +109,7 @@ const Navbar = () => {
 
         <div className="flex gap-4 mr-5 sm:max-w-3/4 pl-3.5">
           <RouterLink to="/getstarted">
-            <button className="py-6 px-7 border rounded-full h-10 flex items-center bg-black text-white justify-center text-[19px]">
+            <button className="py-6 px-7 border rounded-full h-10 flex items-center bg-black text-white justify-center text-[19px] cursor-pointer">
               Get Started
             </button>
           </RouterLink>
@@ -126,7 +126,7 @@ const Navbar = () => {
           <div className="absolute top-3 w-[98%] h-screen bg-[#f3f4f6]">
             <div className="flex items-center justify-between">
               <img
-                className="w-14.5 h-14.5 rounded-4xl object-contain ml-5"
+                className="w-14.5 h-14.5 rounded-4xl object-contain ml-5 cursor-pointer"
                 src={logo}
                 alt=""
               />
@@ -183,9 +183,9 @@ const Navbar = () => {
                 <div>
                   <h4 class="text-xl text-gray-500 mb-1">Address</h4>
                   <p class="font-semibold leading-snug text-2xl">
-                    541 Melville Geek,
+                    Golden Heights,
                     <br />
-                    Palo Alto, CA 94301
+                    Block C, Gulberg Green Islamabad
                   </p>
                 </div>
 
@@ -193,23 +193,21 @@ const Navbar = () => {
                   <h4 class="text-sm text-gray-500 mb-1">Social Media</h4>
                   <ul class="space-y-1">
                     <li>
-                      <a href="#" class="hover:underline">
+                      <a
+                        href="https://www.facebook.com/Naxonsolutions"
+                        class="hover:underline"
+                        target="_blank"
+                      >
                         Facebook
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="hover:underline">
+                      <a
+                        target="_blank"
+                        href="https://www.linkedin.com/company/naxon-solution"
+                        class="hover:underline"
+                      >
                         LinkedIn
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:underline">
-                        Instagram
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:underline">
-                        Twitter
                       </a>
                     </li>
                   </ul>
@@ -218,7 +216,7 @@ const Navbar = () => {
                 <div>
                   <h4 class="text-sm text-gray-500 mb-1">Contact Us</h4>
                   <p>info@Naxon Solution</p>
-                  <p>+00 333 112234</p>
+                  <p>+92-343-5395571</p>
                 </div>
               </div>
             </div>
